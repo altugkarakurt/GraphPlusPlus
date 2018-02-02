@@ -5,11 +5,13 @@
 using namespace std;
 
 int main(){
-    vector<int> e1 {0,1};
-    vector<int> e2 {2,3};
-    vector<int> e3 {1,3};
-    vector<vector<int> > edges {e1,e2,e3};
+    vector<vector<int> > edges {vector<int> {0,1}, vector<int> {2,3}, vector<int> {1,3}};
     Graph g = Graph(edges, 4);
-    cout << "Success! Created a graph from an edge list!";
-    return 0;
+    g.add_edge(1,2);
+    g.del_edge(0,1);
+    auto edgez = g.get_edge_list();
+
+    for(int i=0; i<edgez.size();i++){
+        cout << edgez[i][0] << ", " << edgez[i][1] << "\n";
+    }
 }

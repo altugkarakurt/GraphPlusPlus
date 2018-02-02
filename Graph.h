@@ -2,6 +2,7 @@
 #define GRAPH_H
 using namespace std;
 #include <iostream>
+#include <fstream>
 #include <vector>
 #include <string>
 
@@ -26,9 +27,10 @@ class Graph{
 
         /*Edit the graph*/
         void add_nodes(int cnt);
-        void add_edges(int src, int dest);
-        void add_edges(vector<vector<int> >);
+        void add_edge(int src, int dest);
+        void add_edge(vector<vector<int> > edges);
         void del_edge(int src, int dest);
+        void del_edge(vector<vector<int> > edges);
 };
 
 #endif
