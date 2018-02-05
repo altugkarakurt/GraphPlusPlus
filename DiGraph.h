@@ -1,12 +1,12 @@
-#ifndef GRAPH_H
-#define GRAPH_H
+#ifndef DIGRAPH_H
+#define DIGRAPH_H
 using namespace std;
 #include <iostream>
 #include <fstream>
 #include <vector>
 #include <string>
 
-class Graph{
+class DiGraph{
     protected:
         vector<vector<int> > edge_matrix;
 
@@ -32,3 +32,4 @@ class Graph{
 };
 
 #endif
+
